@@ -3,7 +3,7 @@
 /// </summary>
 public class PlayerStates
 {
-    #region Player State Enum
+    #region Enums
 
     /// <summary>
     /// Defines the different high-level states that the player can be in.
@@ -21,6 +21,15 @@ public class PlayerStates
         Ladders,    // Player is interacting with ladders.
         Ignore      // Utility state for ignoring state checks or transitions.
     }
-
+    
+    /// <summary>
+    /// Defines the various classes the player can be.
+    /// </summary>
+    public enum CharacterClass
+    {
+        Knight,
+        Rogue,
+        Mage
+    }
     #endregion
 }

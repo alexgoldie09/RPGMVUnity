@@ -18,6 +18,20 @@ public class PlayerController : MonoBehaviour
     [Tooltip("State machine responsible for managing the player's current state.")]
     public StateMachine stateMachine;
     
+    [Header("Character Switching")]
+    [Tooltip("Currently active character class (Knight, Rogue, Mage).")]
+    public PlayerStates.CharacterClass currentClass = PlayerStates.CharacterClass.Knight;
+    
+    [Header("Character Animator Controllers")]
+    [Tooltip("Animator controller for the Knight character.")]
+    [SerializeField] private RuntimeAnimatorController knightController;
+    
+    [Tooltip("Animator controller for the Rogue character.")]
+    [SerializeField] private RuntimeAnimatorController rogueController;
+    
+    [Tooltip("Animator controller for the Mage character.")]
+    [SerializeField] private RuntimeAnimatorController mageController;
+    
     private BaseAbility[] playerAbilities; // All abilities available to this player.
 
     public bool FacingRight { get; private set; } = true; // Check whether player is facing right or left.
@@ -46,6 +60,22 @@ public class PlayerController : MonoBehaviour
 
         // Provide abilities to the state machine so it can notify them of state changes.
         stateMachine.abilities = playerAbilities;
+        
+        // Subscribe to character switching input events.
+        gatherInput.OnNextCharacter += HandleNextCharacter;
+        gatherInput.OnPreviousCharacter += HandlePreviousCharacter;
+        
+        // Ensure the correct animator controller is applied at startup.
+        ApplyAnimatorForCurrentClass();
+    }
+    
+    private void OnDestroy()
+    {
+        if (gatherInput != null)
+        {
+            gatherInput.OnNextCharacter -= HandleNextCharacter;
+            gatherInput.OnPreviousCharacter -= HandlePreviousCharacter;
+        }
     }
 
     /// <summary>
@@ -82,18 +112,59 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
     
+    #region Character Switching
+    /// <summary>
+    /// Applies the appropriate animator controller for the current character class.
+    /// </summary>
+    private void ApplyAnimatorForCurrentClass()
+    {
+        switch (currentClass)
+        {
+            case PlayerStates.CharacterClass.Knight:
+                anim.runtimeAnimatorController = knightController;
+                break;
+            case PlayerStates.CharacterClass.Rogue:
+                anim.runtimeAnimatorController = rogueController;
+                break;
+            case PlayerStates.CharacterClass.Mage:
+                anim.runtimeAnimatorController = mageController;
+                break;
+        }
+    }
+
+    private void HandleNextCharacter()
+    {
+        // Cycle forward through the enum values.
+        int count = System.Enum.GetValues(typeof(PlayerStates.CharacterClass)).Length;
+        int next = ((int)currentClass + 1) % count;
+        currentClass = (PlayerStates.CharacterClass)next;
+
+        ApplyAnimatorForCurrentClass();
+    }
+
+    private void HandlePreviousCharacter()
+    {
+        int count = System.Enum.GetValues(typeof(PlayerStates.CharacterClass)).Length;
+        int prev = (int)currentClass - 1;
+        if (prev < 0) prev = count - 1;
+        currentClass = (PlayerStates.CharacterClass)prev;
+
+        ApplyAnimatorForCurrentClass();
+    }
+    #endregion
+    
     #region Helper Methods
     /// <summary>
     /// Flips the player towards the desired location.
     /// </summary>
     public void Flip()
     {
-        if (FacingRight == true && gatherInput.HorizontalInput < 0)
+        if (FacingRight && gatherInput.HorizontalInput < 0)
         {
             transform.Rotate(0, 180f, 0); // Rotate to the left.
             FacingRight = !FacingRight;
         }
-        else if (FacingRight == false && gatherInput.HorizontalInput > 0)
+        else if (!FacingRight && gatherInput.HorizontalInput > 0)
         {
             transform.Rotate(0, 180f, 0); // Rotate to the right.
             FacingRight = !FacingRight;

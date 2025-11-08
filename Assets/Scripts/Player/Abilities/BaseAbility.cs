@@ -14,9 +14,16 @@ public class BaseAbility : MonoBehaviour
     [Header("Ability Settings")]
     [Tooltip("The player state that this ability is responsible for handling.")]
     public PlayerStates.State thisAbilityState;
-
+    
+    [Header("Character Restrictions")]
     [Tooltip("If false, this ability will be ignored when attempting to enter this state.")]
     public bool isPermitted = true;
+    
+    [Tooltip("If true, this ability can be used by all character classes.")]
+    public bool availableToAllCharacters = true;
+
+    [Tooltip("If not available to all, this ability can only be used by this character class.")]
+    public PlayerStates.CharacterClass restrictedToClass;
 
     #region Unity Lifecycle
 
@@ -81,6 +88,24 @@ public class BaseAbility : MonoBehaviour
             linkedStateMachine = player.stateMachine;  // State machine managing player states.
             linkedAnim = player.anim;                  // Animator handling player animations.
         }
+    }
+
+    #endregion
+    
+    #region Character Restriction Helpers
+
+    /// <summary>
+    /// Returns true if this ability is allowed for the player's current character class.
+    /// </summary>
+    protected bool IsAllowedForCurrentClass()
+    {
+        // If the ability is available to all characters or we have no player reference yet,
+        // treat it as allowed.
+        if (availableToAllCharacters || player == null)
+            return true;
+
+        // Only allow the ability if the player's current class matches the restricted class.
+        return player.currentClass == restrictedToClass;
     }
 
     #endregion

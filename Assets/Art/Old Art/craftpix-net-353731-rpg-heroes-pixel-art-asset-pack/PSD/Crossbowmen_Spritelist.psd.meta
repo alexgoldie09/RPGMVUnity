@@ -1,0 +1,1716 @@
+fileFormatVersion: 2
+guid: e082ed919cf764a60a0c33973fe88636
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5720875012053086241
+    second: Crossbowmen_Spritelist_0
+  - first:
+      213: -1819526721630467021
+    second: Crossbowmen_Spritelist_1
+  - first:
+      213: 3260515097884055475
+    second: Crossbowmen_Spritelist_2
+  - first:
+      213: 7847792585829856783
+    second: Crossbowmen_Spritelist_3
+  - first:
+      213: -7861087773950168250
+    second: Crossbowmen_Spritelist_4
+  - first:
+      213: 1032291386825671342
+    second: Crossbowmen_Spritelist_5
+  - first:
+      213: 2250234964420656145
+    second: Crossbowmen_Spritelist_6
+  - first:
+      213: 6574801263739958188
+    second: Crossbowmen_Spritelist_7
+  - first:
+      213: 5680650258795126550
+    second: Crossbowmen_Spritelist_8
+  - first:
+      213: -538940420206785860
+    second: Crossbowmen_Spritelist_9
+  - first:
+      213: 9005611945528964387
+    second: Crossbowmen_Spritelist_10
+  - first:
+      213: 7622166690172819214
+    second: Crossbowmen_Spritelist_11
+  - first:
+      213: 2404082466283914663
+    second: Crossbowmen_Spritelist_12
+  - first:
+      213: -7215621736396341736
+    second: Crossbowmen_Spritelist_13
+  - first:
+      213: 9065510985498031880
+    second: Crossbowmen_Spritelist_14
+  - first:
+      213: 3789768480031678008
+    second: Crossbowmen_Spritelist_15
+  - first:
+      213: -7733488864615479385
+    second: Crossbowmen_Spritelist_16
+  - first:
+      213: -9056944816219955127
+    second: Crossbowmen_Spritelist_17
+  - first:
+      213: 1380304892949258081
+    second: Crossbowmen_Spritelist_18
+  - first:
+      213: 8892889544980913477
+    second: Crossbowmen_Spritelist_19
+  - first:
+      213: 228830651684793563
+    second: Crossbowmen_Spritelist_20
+  - first:
+      213: 1481390621012332505
+    second: Crossbowmen_Spritelist_21
+  - first:
+      213: 2339018496688996048
+    second: Crossbowmen_Spritelist_22
+  - first:
+      213: 128969600256475476
+    second: Crossbowmen_Spritelist_23
+  - first:
+      213: 6158785849873586557
+    second: Crossbowmen_Spritelist_24
+  - first:
+      213: -7233342326922413548
+    second: Crossbowmen_Spritelist_25
+  - first:
+      213: -3638468181329195044
+    second: Crossbowmen_Spritelist_26
+  - first:
+      213: 4613045297474462145
+    second: Crossbowmen_Spritelist_27
+  - first:
+      213: -1289105464702497430
+    second: Crossbowmen_Spritelist_28
+  - first:
+      213: -5304610184979572450
+    second: Crossbowmen_Spritelist_29
+  - first:
+      213: 2378648915504873791
+    second: Crossbowmen_Spritelist_30
+  - first:
+      213: -9155534776570749691
+    second: Crossbowmen_Spritelist_31
+  - first:
+      213: 4820720324689136729
+    second: Crossbowmen_Spritelist_32
+  - first:
+      213: -6596852606923373550
+    second: Crossbowmen_Spritelist_33
+  - first:
+      213: -4890221654220071945
+    second: Crossbowmen_Spritelist_34
+  - first:
+      213: 523128998054518191
+    second: Crossbowmen_Spritelist_35
+  - first:
+      213: 468030434637525416
+    second: Crossbowmen_Spritelist_36
+  - first:
+      213: 139377432115606652
+    second: Crossbowmen_Spritelist_37
+  - first:
+      213: 804053934471224780
+    second: Crossbowmen_Spritelist_38
+  - first:
+      213: -1203243467585503793
+    second: Crossbowmen_Spritelist_39
+  - first:
+      213: 5239772284230997197
+    second: Crossbowmen_Spritelist_40
+  - first:
+      213: -3220660021293019190
+    second: Crossbowmen_Spritelist_41
+  - first:
+      213: -4112892766731922508
+    second: Crossbowmen_Spritelist_42
+  - first:
+      213: 7603568399638372043
+    second: Crossbowmen_Spritelist_43
+  - first:
+      213: 7858743656870779115
+    second: Crossbowmen_Spritelist_44
+  - first:
+      213: 6706719862049190209
+    second: Crossbowmen_Spritelist_45
+  - first:
+      213: -3140931299411539328
+    second: Crossbowmen_Spritelist_46
+  - first:
+      213: 4977602762156599875
+    second: Crossbowmen_Spritelist_47
+  - first:
+      213: -724440247699572428
+    second: Crossbowmen_Spritelist_48
+  - first:
+      213: -2100446312635021780
+    second: Crossbowmen_Spritelist_49
+  - first:
+      213: 3120641812480241603
+    second: Crossbowmen_Spritelist_50
+  - first:
+      213: -5248150087912260085
+    second: Crossbowmen_Spritelist_51
+  - first:
+      213: -937024742256881619
+    second: Crossbowmen_Spritelist_52
+  - first:
+      213: 1985288426731600507
+    second: Crossbowmen_Spritelist_53
+  - first:
+      213: 2521438513105816432
+    second: Crossbowmen_Spritelist_54
+  - first:
+      213: 3452166756537486332
+    second: Crossbowmen_Spritelist_55
+  - first:
+      213: 8906710918234947384
+    second: Crossbowmen_Spritelist_56
+  - first:
+      213: 7401444236057160249
+    second: Crossbowmen_Spritelist_57
+  - first:
+      213: 4569535143292161228
+    second: Crossbowmen_Spritelist_58
+  - first:
+      213: -5220893222714964659
+    second: Crossbowmen_Spritelist_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 863
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfca2eac7e5b90b0800000000000000
+      internalID: -5720875012053086241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 863
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c82e1461ebfb6e0800000000000000
+      internalID: -1819526721630467021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 863
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b75d22e43daf3d20800000000000000
+      internalID: 3260515097884055475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 863
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06355507c5f8ec60800000000000000
+      internalID: 7847792585829856783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 863
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643b885c15ec7e290800000000000000
+      internalID: -7861087773950168250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_5
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 863
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea280780c8f635e00800000000000000
+      internalID: 1032291386825671342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 767
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cf47327c07a3f10800000000000000
+      internalID: 2250234964420656145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 767
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca372022ae26e3b50800000000000000
+      internalID: 6574801263739958188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_8
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 767
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fd6b02059b5de40800000000000000
+      internalID: 5680650258795126550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_9
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 767
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba89721b8c4588f0800000000000000
+      internalID: -538940420206785860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_10
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 767
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325b446c95c5afc70800000000000000
+      internalID: 9005611945528964387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_11
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 767
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07d092883067c960800000000000000
+      internalID: 7622166690172819214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_12
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 767
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5099504440d5120800000000000000
+      internalID: 2404082466283914663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_13
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 767
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e3280c246fcdb90800000000000000
+      internalID: -7215621736396341736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_14
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 671
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807f20ec53a2fcd70800000000000000
+      internalID: 9065510985498031880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_15
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 671
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e92418a56f79430800000000000000
+      internalID: 3789768480031678008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_16
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 671
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7c726f9d02da490800000000000000
+      internalID: -7733488864615479385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_17
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 671
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940e4e6eca44f4280800000000000000
+      internalID: -9056944816219955127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_18
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 671
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f59f9acf3d72310800000000000000
+      internalID: 1380304892949258081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_19
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 671
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d5f53bce3e96b70800000000000000
+      internalID: 8892889544980913477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_20
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 671
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdca46be348fc2300800000000000000
+      internalID: 228830651684793563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_21
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 671
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df090bcbe4fe8410800000000000000
+      internalID: 1481390621012332505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 575
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de373a1eecd57020800000000000000
+      internalID: 2339018496688996048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 575
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4518c1a0b213ac100800000000000000
+      internalID: 128969600256475476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_24
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 576
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79da6d8917687550800000000000000
+      internalID: 6158785849873586557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_25
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 579
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41afdf04a710e9b90800000000000000
+      internalID: -7233342326922413548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_26
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 580
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfcf4d6770918dc0800000000000000
+      internalID: -3638468181329195044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_27
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 579
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c160c0d144d40040800000000000000
+      internalID: 4613045297474462145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_28
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 578
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d846ae86d2c1ee0800000000000000
+      internalID: -1289105464702497430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_29
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 575
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e199f5c442d3266b0800000000000000
+      internalID: -5304610184979572450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_30
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 575
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3149060698a20120800000000000000
+      internalID: 2378648915504873791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_31
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 575
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dd3c9f0a101f080800000000000000
+      internalID: -9155534776570749691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_32
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 479
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c0a921893a6e240800000000000000
+      internalID: 4820720324689136729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_33
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 479
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21409b071854374a0800000000000000
+      internalID: -6596852606923373550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_34
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 479
+        width: 127
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb1a43a051722cb0800000000000000
+      internalID: -4890221654220071945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_35
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 383
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faddeb45d07824700800000000000000
+      internalID: 523128998054518191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_36
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 383
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a134a85337ce7600800000000000000
+      internalID: 468030434637525416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_37
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 383
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74f4fa390b2fe100800000000000000
+      internalID: 139377432115606652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_38
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 383
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd99681bc2982b00800000000000000
+      internalID: 804053934471224780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_39
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 383
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdb148f0783d4fe0800000000000000
+      internalID: -1203243467585503793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_40
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 383
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc49689812967b840800000000000000
+      internalID: 5239772284230997197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_41
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 383
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf078046caed43d0800000000000000
+      internalID: -3220660021293019190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_42
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 383
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b39ba7d1d11ce6c0800000000000000
+      internalID: -4112892766731922508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 287
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce94dd8c2d458960800000000000000
+      internalID: 7603568399638372043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_44
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 287
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be813a0f7bddf0d60800000000000000
+      internalID: 7858743656870779115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_45
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 287
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141bf794e2e031d50800000000000000
+      internalID: 6706719862049190209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_46
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 306
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a4ba2ef9b2964d0800000000000000
+      internalID: -3140931299411539328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_47
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 287
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ae857f65ff31540800000000000000
+      internalID: 4977602762156599875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_48
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 191
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439fed6de6542f5f0800000000000000
+      internalID: -724440247699572428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_49
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 191
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c264c911537b9d2e0800000000000000
+      internalID: -2100446312635021780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_50
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 191
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cfad10d13fbe4b20800000000000000
+      internalID: 3120641812480241603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_51
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 210
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0efd0a0d43da27b0800000000000000
+      internalID: -5248150087912260085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_52
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 191
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20d60426f40ff2f0800000000000000
+      internalID: -937024742256881619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_53
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 95
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7af70c3e492d8b10800000000000000
+      internalID: 1985288426731600507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_54
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 95
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b49a0f7f2fdf220800000000000000
+      internalID: 2521438513105816432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_55
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 95
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb44dcef5f88ef20800000000000000
+      internalID: 3452166756537486332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_56
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fbc7ee36efa9b70800000000000000
+      internalID: 8906710918234947384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_57
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93aac03715637b660800000000000000
+      internalID: 7401444236057160249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_58
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccc79c90004a6f30800000000000000
+      internalID: 4569535143292161228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crossbowmen_Spritelist_59
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4584d18649ab87b0800000000000000
+      internalID: -5220893222714964659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Crossbowmen_Spritelist_0: -5720875012053086241
+      Crossbowmen_Spritelist_1: -1819526721630467021
+      Crossbowmen_Spritelist_10: 9005611945528964387
+      Crossbowmen_Spritelist_11: 7622166690172819214
+      Crossbowmen_Spritelist_12: 2404082466283914663
+      Crossbowmen_Spritelist_13: -7215621736396341736
+      Crossbowmen_Spritelist_14: 9065510985498031880
+      Crossbowmen_Spritelist_15: 3789768480031678008
+      Crossbowmen_Spritelist_16: -7733488864615479385
+      Crossbowmen_Spritelist_17: -9056944816219955127
+      Crossbowmen_Spritelist_18: 1380304892949258081
+      Crossbowmen_Spritelist_19: 8892889544980913477
+      Crossbowmen_Spritelist_2: 3260515097884055475
+      Crossbowmen_Spritelist_20: 228830651684793563
+      Crossbowmen_Spritelist_21: 1481390621012332505
+      Crossbowmen_Spritelist_22: 2339018496688996048
+      Crossbowmen_Spritelist_23: 128969600256475476
+      Crossbowmen_Spritelist_24: 6158785849873586557
+      Crossbowmen_Spritelist_25: -7233342326922413548
+      Crossbowmen_Spritelist_26: -3638468181329195044
+      Crossbowmen_Spritelist_27: 4613045297474462145
+      Crossbowmen_Spritelist_28: -1289105464702497430
+      Crossbowmen_Spritelist_29: -5304610184979572450
+      Crossbowmen_Spritelist_3: 7847792585829856783
+      Crossbowmen_Spritelist_30: 2378648915504873791
+      Crossbowmen_Spritelist_31: -9155534776570749691
+      Crossbowmen_Spritelist_32: 4820720324689136729
+      Crossbowmen_Spritelist_33: -6596852606923373550
+      Crossbowmen_Spritelist_34: -4890221654220071945
+      Crossbowmen_Spritelist_35: 523128998054518191
+      Crossbowmen_Spritelist_36: 468030434637525416
+      Crossbowmen_Spritelist_37: 139377432115606652
+      Crossbowmen_Spritelist_38: 804053934471224780
+      Crossbowmen_Spritelist_39: -1203243467585503793
+      Crossbowmen_Spritelist_4: -7861087773950168250
+      Crossbowmen_Spritelist_40: 5239772284230997197
+      Crossbowmen_Spritelist_41: -3220660021293019190
+      Crossbowmen_Spritelist_42: -4112892766731922508
+      Crossbowmen_Spritelist_43: 7603568399638372043
+      Crossbowmen_Spritelist_44: 7858743656870779115
+      Crossbowmen_Spritelist_45: 6706719862049190209
+      Crossbowmen_Spritelist_46: -3140931299411539328
+      Crossbowmen_Spritelist_47: 4977602762156599875
+      Crossbowmen_Spritelist_48: -724440247699572428
+      Crossbowmen_Spritelist_49: -2100446312635021780
+      Crossbowmen_Spritelist_5: 1032291386825671342
+      Crossbowmen_Spritelist_50: 3120641812480241603
+      Crossbowmen_Spritelist_51: -5248150087912260085
+      Crossbowmen_Spritelist_52: -937024742256881619
+      Crossbowmen_Spritelist_53: 1985288426731600507
+      Crossbowmen_Spritelist_54: 2521438513105816432
+      Crossbowmen_Spritelist_55: 3452166756537486332
+      Crossbowmen_Spritelist_56: 8906710918234947384
+      Crossbowmen_Spritelist_57: 7401444236057160249
+      Crossbowmen_Spritelist_58: 4569535143292161228
+      Crossbowmen_Spritelist_59: -5220893222714964659
+      Crossbowmen_Spritelist_6: 2250234964420656145
+      Crossbowmen_Spritelist_7: 6574801263739958188
+      Crossbowmen_Spritelist_8: 5680650258795126550
+      Crossbowmen_Spritelist_9: -538940420206785860
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

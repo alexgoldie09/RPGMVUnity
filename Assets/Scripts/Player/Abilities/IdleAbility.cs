@@ -30,15 +30,21 @@ public class IdleAbility : BaseAbility
     /// </summary>
     public override void ProcessUpdateAbility()
     {
-        // If there is any horizontal input, flip the player if needed
-        // and switch from Idle to Run.
+        // If the player is not grounded, transition to the Jump state (falling in the blend tree).
+        if (!linkedPhysics.IsGrounded)
+        {
+            linkedStateMachine.ChangeState(PlayerStates.State.Jump);
+            return; // Don't process idle/run logic this frame.
+        }
+
+        // If there is any horizontal input and we are grounded, flip and go to Run.
         if (linkedInput.HorizontalInput != 0)
         {
             player.Flip();
             linkedStateMachine.ChangeState(PlayerStates.State.Run);
         }
     }
-
+    
     /// <summary>
     /// Updates animator parameters related to the idle state.
     /// </summary>

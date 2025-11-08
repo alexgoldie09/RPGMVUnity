@@ -47,10 +47,16 @@ public class MoveAbility : BaseAbility
             player.Flip();
         }
         
-        // If there is no horizontal input, transition back to the idle state.
-        if (linkedInput.HorizontalInput == 0)
+        // If there is no horizontal input and player is grounded, transition back to the idle state.
+        if (linkedPhysics.IsGrounded && linkedInput.HorizontalInput == 0)
         {
             linkedStateMachine.ChangeState(PlayerStates.State.Idle);
+        }
+        
+        // If the player is not grounded, transition to the Jump state (falling in the blend tree).
+        if (!linkedPhysics.IsGrounded)
+        {
+            linkedStateMachine.ChangeState(PlayerStates.State.Jump);
         }
     }
 
