@@ -146,8 +146,8 @@ public class JumpAbility : BaseAbility
         if (!isPermitted)
             return;
 
-        // Only allow a new jump if the player is grounded.
-        if (linkedPhysics.IsGrounded)
+        // Only allow a new jump if the player is grounded AND they are permitted by class
+        if (linkedPhysics.IsGrounded && IsAllowedForCurrentClass())
         {
             // Enter the Jump state.
             linkedStateMachine.ChangeState(PlayerStates.State.Jump);
