@@ -65,6 +65,14 @@ public class JumpAbility : BaseAbility
         {
             linkedStateMachine.ChangeState(PlayerStates.State.Idle);
         }
+        
+        // If not grounded, and only Mage is allowed to enter the Glide state
+        if (!linkedPhysics.IsGrounded &&
+            player.currentClass == PlayerStates.CharacterClass.Mage &&
+            linkedPhysics.rb.linearVelocityY < 0)
+        {
+            linkedStateMachine.ChangeState(PlayerStates.State.Glide);
+        }
     }
 
     /// <summary>
@@ -92,7 +100,8 @@ public class JumpAbility : BaseAbility
         // Enable the jump animation only while the state machine is in the Jump state.
         linkedAnim.SetBool(
             jumpParameterID,
-            linkedStateMachine.currentState == PlayerStates.State.Jump
+            linkedStateMachine.currentState == PlayerStates.State.Jump || 
+            linkedStateMachine.currentState == PlayerStates.State.WallJump
         );
 
         // Update the vertical speed parameter for the animator blend tree.

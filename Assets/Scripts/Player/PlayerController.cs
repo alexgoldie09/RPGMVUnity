@@ -170,5 +170,14 @@ public class PlayerController : MonoBehaviour
             FacingRight = !FacingRight;
         }
     }
+    
+    /// <summary>
+    /// Forcefully flips the player towards the desired location.
+    /// </summary>
+    public void ForceFlip()
+    {
+        transform.Rotate(0, 180f, 0);
+        FacingRight = !FacingRight;
+    }
     #endregion
 }

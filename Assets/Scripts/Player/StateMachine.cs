@@ -16,6 +16,19 @@ public class StateMachine
     /// <param name="newState">The desired new player state.</param>
     public void ChangeState(PlayerStates.State newState)
     {
+        // Find the ability that matches the new state and notify it that it is entering.
+        foreach (BaseAbility ability in abilities)
+        {
+            if (ability.thisAbilityState == newState)
+            {
+                // Only allow transition if the ability is currently permitted.
+                if (!ability.isPermitted)
+                {
+                    return;
+                }
+            }
+        }
+        
         // Notify the ability associated with the current state that it is exiting.
         foreach (BaseAbility ability in abilities)
         {
