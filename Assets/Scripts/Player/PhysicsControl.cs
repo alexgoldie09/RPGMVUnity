@@ -38,7 +38,12 @@ public class PhysicsControl : MonoBehaviour
     [Tooltip("The physics layers considered to be wall.")]
     [SerializeField] private LayerMask wallLayer;
     
-    
+    /// <summary>
+    /// If true, this object is treated as grounded regardless of raycasts.
+    /// Useful for scripted platforms or special movement.
+    /// </summary>
+    [HideInInspector] public bool ForceGrounded;
+
     /// <summary>
     /// Indicates whether the object is currently considered to be on the ground.
     /// </summary>
@@ -75,8 +80,11 @@ public class PhysicsControl : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
-        // Update IsGrounded each physics step based on raycast results.
-        IsGrounded = CheckGround();
+        // If a script is explicitly forcing grounded, skip the raycast.
+        if (ForceGrounded)
+            IsGrounded = true;
+        else
+            IsGrounded = CheckGround();
         
         // Update IsWallDetected each physics step based on raycast results.
         IsWallDetected = CheckWall();

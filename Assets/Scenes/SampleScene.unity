@@ -1798,6 +1798,7 @@ Transform:
   - {fileID: 141462789}
   - {fileID: 1878190523}
   - {fileID: 1545544008}
+  - {fileID: 1980457271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &64094642
@@ -1939,6 +1940,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 1024
+  ForceGrounded: 0
 --- !u!61 &64094649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2031,6 +2033,7 @@ GameObject:
   - component: {fileID: 431441542}
   - component: {fileID: 431441541}
   - component: {fileID: 431441543}
+  - component: {fileID: 431441544}
   m_Layer: 7
   m_Name: Abilities
   m_TagString: Untagged
@@ -2187,6 +2190,36 @@ MonoBehaviour:
   dashForce: 15
   maxDashDuration: 0.2
   dashActionRef: {fileID: -7163726918366619181, guid: 76aa49659e35d4763b59f1059ecfe1cd, type: 3}
+--- !u!114 &431441544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431441536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af681672353e24306ac146317dc9faa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcePlatformAbility
+  thisAbilityState: 7
+  isPermitted: 1
+  availableToAllCharacters: 0
+  restrictedToClass: 2
+  usesCharges: 1
+  maxCharges: 1
+  rechargeDelay: 8
+  icePlatformActionRef: {fileID: 5761517058512518959, guid: 76aa49659e35d4763b59f1059ecfe1cd, type: 3}
+  icePlatformPrefab: {fileID: 9210815877697077408, guid: d901e1c05b8cf48e89fc22c92a7b5427, type: 3}
+  platformSpawnPoint: {fileID: 1980457271}
+  platformSpawnOffset: {x: -0.5, y: 0}
+  growthInterval: 0.15
+  maxCastDuration: 2
+  environmentMask:
+    serializedVersion: 2
+    m_Bits: 1088
+  ceilingCheckDistance: 2
+  castAnimParameterName: IceCast
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,6 +5988,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 64094641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1980457270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980457271}
+  m_Layer: 7
+  m_Name: PlatformSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1980457271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980457270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

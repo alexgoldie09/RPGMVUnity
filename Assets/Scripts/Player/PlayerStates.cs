@@ -17,6 +17,7 @@ public class PlayerStates
         WallJump,   // Player is jumping off a wall.
         Glide,      // Player is gliding.
         Dash,       // Player performs a quick burst of movement.
+        IceCast,    // Player performs an ice cast.
         Ladders,    // Player is interacting with ladders.
         Ignore      // Utility state for ignoring state checks or transitions.
     }
