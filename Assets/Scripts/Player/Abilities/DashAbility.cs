@@ -16,18 +16,10 @@ public class DashAbility: BaseAbility
 
     [Tooltip("Time for how long the player can dash for.")]
     [SerializeField] private float maxDashDuration = 1f;
-    
-    [Tooltip("How many dashes can be used before requiring a recharge.")]
-    [SerializeField] private int maxDashCharges = 3;
-
-    [Tooltip("Time in seconds before dash charges fully recharge after being depleted.")]
-    [SerializeField] private float dashRechargeDelay = 2f;
 
     [Tooltip("Input System action reference used to trigger jumps.")]
     [SerializeField] private InputActionReference dashActionRef;
-
-    private int currentDashCharges; // Reference to store current dash charges
-    private float dashRechargeTimer; // Reference to store dash recharge timer
+    
     private float dashTimer; // Reference to store dash timer
     private int dashParameterID; // Cached hash for the jump animation parameter to avoid repeated string lookups.
     
@@ -43,10 +35,6 @@ public class DashAbility: BaseAbility
     
         // Cache animation parameter hashes for performance.
         dashParameterID = Animator.StringToHash(dashAnimParameterName);
-        
-        // Start with full charges.
-        currentDashCharges = maxDashCharges;
-        dashRechargeTimer = 0f;
     }
     
     /// <summary>
@@ -85,19 +73,6 @@ public class DashAbility: BaseAbility
     /// </summary>
     public override void UpdateAnimator()
     {
-        // Handle dash recharge timer
-        if (currentDashCharges <= 0 && dashRechargeTimer > 0f)
-        {
-            dashRechargeTimer -= Time.deltaTime;
-
-            if (dashRechargeTimer <= 0f)
-            {
-                // Refill all charges once the cooldown completes.
-                currentDashCharges = maxDashCharges;
-                dashRechargeTimer = 0f;
-            }
-        }
-
         // Animator logic
         if (IsAllowedForCurrentClass())
         {
@@ -142,7 +117,7 @@ public class DashAbility: BaseAbility
             return;
         
         // If out of charges, can't dash.
-        if (currentDashCharges <= 0)
+        if (!HasAvailableCharges())
             return;
         
         // If this ability is the same state as dash, idle, or a wall is met, do nothing.
@@ -154,6 +129,10 @@ public class DashAbility: BaseAbility
         // Only allow a new dash if the player is grounded AND they are permitted by class
         if (IsAllowedForCurrentClass())
         {
+            // Consume charge if needed, otherwise exit early.
+            if(!TryConsumeCharge())
+                return;
+            
             // Enter the Jump state and disable gravity
             linkedStateMachine.ChangeState(PlayerStates.State.Dash);
             linkedPhysics.DisableGravity();
@@ -167,15 +146,6 @@ public class DashAbility: BaseAbility
 
             // Set dash timer.
             dashTimer = maxDashDuration;
-            
-            // Spend one charge.
-            currentDashCharges--;
-
-            // If we've just used the last charge, start the recharge cooldown.
-            if (currentDashCharges <= 0)
-            {
-                dashRechargeTimer = dashRechargeDelay;
-            }
         }
     }
     #endregion

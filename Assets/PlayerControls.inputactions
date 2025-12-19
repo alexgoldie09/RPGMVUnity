@@ -43,7 +43,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dash",
+                    "name": "Dash/Glide",
                     "type": "Button",
                     "id": "2d5d37cb-880d-4528-802a-a2df8277b133",
                     "expectedControlType": "",
@@ -170,7 +170,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dash",
+                    "action": "Dash/Glide",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

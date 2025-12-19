@@ -15,17 +15,9 @@ public class WallJumpAbility : BaseAbility
     [Tooltip("Maximum amount of time the player can wall jump.")]
     [SerializeField] private float maxWallJumpTime = 0.5f;
     
-    [Tooltip("How many wall jumps can be used before requiring a recharge.")]
-    [SerializeField] private int maxWallJumpCharges = 2;
-
-    [Tooltip("Time in seconds before wall jump charges fully recharge after being depleted.")]
-    [SerializeField] private float wallJumpRechargeDelay = 2f;
-    
     [Tooltip("Input System action reference used to trigger jumps.")]
     [SerializeField] private InputActionReference wallJumpActionRef;
-    
-    private int currentWallJumpCharges; // Reference to store current wall jump charges
-    private float wallJumpRechargeTimer; // Reference to store wall jump recharge timer
+   
     private float minWallJumpTime = 0.15f; // Reference to store minimum air time.
     private float wallJumpTimer; // Reference to store wall jump timer.
 
@@ -41,10 +33,6 @@ public class WallJumpAbility : BaseAbility
 
         // Store the original wall jump timer to the maximum wall jump.
         wallJumpTimer = maxWallJumpTime;
-        
-        // Start with full charges.
-        currentWallJumpCharges = maxWallJumpCharges;
-        wallJumpRechargeTimer = 0f;
     }
     
     /// <summary>
@@ -72,25 +60,6 @@ public class WallJumpAbility : BaseAbility
         {
             linkedStateMachine.ChangeState(PlayerStates.State.Jump);
             wallJumpTimer = -1;
-        }
-    }
-    
-    /// <summary>
-    /// Updates animator parameters related to the wall jump state.
-    /// </summary>
-    public override void UpdateAnimator()
-    {
-        // Handle dash recharge timer
-        if (currentWallJumpCharges <= 0 && wallJumpRechargeTimer > 0f)
-        {
-            wallJumpRechargeTimer -= Time.deltaTime;
-
-            if (wallJumpRechargeTimer <= 0f)
-            {
-                // Refill all charges once the cooldown completes.
-                currentWallJumpCharges = maxWallJumpCharges;
-                wallJumpRechargeTimer = 0f;
-            }
         }
     }
     #endregion
@@ -132,12 +101,16 @@ public class WallJumpAbility : BaseAbility
             return;
         
         // If out of charges, can't wall jump.
-        if (currentWallJumpCharges <= 0)
+        if (!HasAvailableCharges())
             return;
 
         // Only allow a new wall jump if the player is follows the conditions
         if (EvaluateWallJumpConditions())
         {
+            // Consume charge if needed, otherwise exit early.
+            if(!TryConsumeCharge())
+                return;
+            
             // Enter the Wall Jump state.
             linkedStateMachine.ChangeState(PlayerStates.State.WallJump);
             
@@ -145,20 +118,11 @@ public class WallJumpAbility : BaseAbility
             wallJumpTimer = maxWallJumpTime;
             minWallJumpTime = 0.15f;
 
-            // Fli[ the player and then add the velocity.
+            // Flip the player and then add the velocity.
             player.ForceFlip();
             linkedPhysics.rb.linearVelocity = player.FacingRight ? 
                 new Vector2(wallJumpForce.x, wallJumpForce.y) : 
                 new Vector2(-wallJumpForce.x, wallJumpForce.y);
-            
-            // Spend one charge.
-            currentWallJumpCharges--;
-
-            // If we've just used the last charge, start the recharge cooldown.
-            if (currentWallJumpCharges <= 0)
-            {
-                wallJumpRechargeTimer = wallJumpRechargeDelay;
-            }
         }
     }
     

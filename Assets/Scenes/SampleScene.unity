@@ -2028,8 +2028,8 @@ GameObject:
   - component: {fileID: 431441538}
   - component: {fileID: 431441539}
   - component: {fileID: 431441540}
-  - component: {fileID: 431441541}
   - component: {fileID: 431441542}
+  - component: {fileID: 431441541}
   - component: {fileID: 431441543}
   m_Layer: 7
   m_Name: Abilities
@@ -2069,6 +2069,9 @@ MonoBehaviour:
   isPermitted: 1
   availableToAllCharacters: 1
   restrictedToClass: 0
+  usesCharges: 0
+  maxCharges: 1
+  rechargeDelay: 0
   idleAnimParameterName: Idle
 --- !u!114 &431441539
 MonoBehaviour:
@@ -2086,6 +2089,9 @@ MonoBehaviour:
   isPermitted: 1
   availableToAllCharacters: 1
   restrictedToClass: 0
+  usesCharges: 0
+  maxCharges: 1
+  rechargeDelay: 0
   runAnimParameterName: Run
   moveSpeed: 5
 --- !u!114 &431441540
@@ -2104,6 +2110,9 @@ MonoBehaviour:
   isPermitted: 1
   availableToAllCharacters: 1
   restrictedToClass: 0
+  usesCharges: 0
+  maxCharges: 1
+  rechargeDelay: 0
   jumpAnimParameterName: Jump
   ySpeedAnimParameterName: ySpeed
   jumpForce: 10
@@ -2126,10 +2135,11 @@ MonoBehaviour:
   isPermitted: 1
   availableToAllCharacters: 0
   restrictedToClass: 1
+  usesCharges: 1
+  maxCharges: 2
+  rechargeDelay: 3
   wallJumpForce: {x: 6, y: 10}
   maxWallJumpTime: 0.3
-  maxWallJumpCharges: 2
-  wallJumpRechargeDelay: 2
   wallJumpActionRef: {fileID: -8902339675247737503, guid: 76aa49659e35d4763b59f1059ecfe1cd, type: 3}
 --- !u!114 &431441542
 MonoBehaviour:
@@ -2147,9 +2157,13 @@ MonoBehaviour:
   isPermitted: 1
   availableToAllCharacters: 0
   restrictedToClass: 2
+  usesCharges: 0
+  maxCharges: 1
+  rechargeDelay: 0
   glideAnimParameterName: Glide
-  maxGlideVerticalSpeed: 0.5
+  maxGlideVerticalSpeed: 0.2
   glideHorizontalSpeed: 2
+  glideActionRef: {fileID: -7163726918366619181, guid: 76aa49659e35d4763b59f1059ecfe1cd, type: 3}
 --- !u!114 &431441543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2166,11 +2180,12 @@ MonoBehaviour:
   isPermitted: 1
   availableToAllCharacters: 0
   restrictedToClass: 0
+  usesCharges: 1
+  maxCharges: 3
+  rechargeDelay: 5
   dashAnimParameterName: Dash
   dashForce: 15
   maxDashDuration: 0.2
-  maxDashCharges: 3
-  dashRechargeDelay: 2
   dashActionRef: {fileID: -7163726918366619181, guid: 76aa49659e35d4763b59f1059ecfe1cd, type: 3}
 --- !u!1 &519420028
 GameObject:

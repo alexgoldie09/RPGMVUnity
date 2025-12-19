@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// Base class for all player abilities, providing shared references and lifecycle hooks.
@@ -24,6 +25,19 @@ public class BaseAbility : MonoBehaviour
 
     [Tooltip("If not available to all, this ability can only be used by this character class.")]
     public PlayerStates.CharacterClass restrictedToClass;
+    
+    [Header("Charge Settings")]
+    [Tooltip("If true, this ability has a limited number of charges that recharge after a delay.")]
+    [SerializeField] protected bool usesCharges = false;
+
+    [Tooltip("Maximum number of uses available before recharging.")]
+    [SerializeField] protected int maxCharges = 1;
+
+    [Tooltip("Time in seconds before charges fully recharge after being depleted.")]
+    [SerializeField] protected float rechargeDelay = 0f;
+
+    protected int currentCharges; // Reference to the current amount of charges.
+    protected float rechargeTimer; // Reference to how long the recharge time is.
 
     #region Unity Lifecycle
 
@@ -88,8 +102,97 @@ public class BaseAbility : MonoBehaviour
             linkedStateMachine = player.stateMachine;  // State machine managing player states.
             linkedAnim = player.anim;                  // Animator handling player animations.
         }
+        
+        ResetCharges();
     }
 
+    #endregion
+    
+    #region Charge Helpers
+    /// <summary>
+    /// Attempts to spend a charge. Returns true if the ability can be used.
+    /// </summary>
+    protected bool TryConsumeCharge()
+    {
+        if (!usesCharges)
+            return true;
+
+        if (currentCharges <= 0)
+        {
+            BeginRechargeIfNeeded();
+            return false;
+        }
+
+        currentCharges--;
+
+        if (currentCharges <= 0)
+        {
+            rechargeTimer = rechargeDelay;
+            BeginRechargeIfNeeded();
+        }
+
+        return true;
+    }
+    
+    /// <summary>
+    /// Returns true if this ability currently has at least one available charge.
+    /// </summary>
+    protected bool HasAvailableCharges() => !usesCharges || currentCharges > 0;
+
+    /// <summary>
+    /// Refill charges to the configured maximum.
+    /// </summary>
+    private void ResetCharges()
+    {
+        if (!usesCharges)
+            return;
+
+        currentCharges = Mathf.Max(1, maxCharges);
+        rechargeTimer = 0f;
+    }
+    
+    /// <summary>
+    /// Starts the recharge coroutine if charges are depleted and the ability tracks charges.
+    /// </summary>
+    private void BeginRechargeIfNeeded()
+    {
+        if (!usesCharges || currentCharges > 0 || rechargeCoroutine != null)
+            return;
+
+        if (rechargeTimer <= 0f)
+        {
+            ResetCharges();
+            return;
+        }
+
+        rechargeCoroutine = StartCoroutine(RechargeRoutine());
+    }
+
+    /// <summary>
+    /// Waits for the recharge delay to elapse before restoring charges.
+    /// </summary>
+    private IEnumerator RechargeRoutine()
+    {
+        while (usesCharges && currentCharges <= 0)
+        {
+            if (rechargeTimer > 0f)
+            {
+                rechargeTimer -= Time.deltaTime;
+            }
+
+            if (rechargeTimer <= 0f)
+            {
+                ResetCharges();
+                break;
+            }
+
+            yield return null;
+        }
+
+        rechargeCoroutine = null;
+    }
+
+    private Coroutine rechargeCoroutine;
     #endregion
     
     #region Character Restriction Helpers

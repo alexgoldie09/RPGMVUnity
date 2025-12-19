@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 /// <summary>
@@ -19,7 +20,10 @@ public class GlideAbility : BaseAbility
     [Tooltip("Horizontal movement speed while gliding.")]
     [SerializeField] private float glideHorizontalSpeed = 5f;
     
-    private int glideParameterID; // Cached hash for the jump animation parameter to avoid repeated string lookups.
+    [Tooltip("Input System action reference used to trigger jumps.")]
+    [SerializeField] private InputActionReference glideActionRef;
+    
+    private int glideParameterID; // Cached hash for the glide animation parameter to avoid repeated string lookups.
     
     #region Base Class Overrides
     /// <summary>
@@ -71,22 +75,18 @@ public class GlideAbility : BaseAbility
     /// </summary>
     public override void ProcessFixedAbility()
     {
-        // Only apply glide control while in the air.
-        if (!linkedPhysics.IsGrounded)
-        {
-            // Clamp vertical speed for the glide.
-            float clampedY = Mathf.Clamp(
-                linkedPhysics.rb.linearVelocityY,
-                -maxGlideVerticalSpeed,
-                1f
+        // Clamp vertical speed for the glide.
+        float clampedY = Mathf.Clamp(
+            linkedPhysics.rb.linearVelocityY,
+            -maxGlideVerticalSpeed,
+            1f
             );
 
-            // Apply horizontal input like in jump falling, but using glideHorizontalSpeed.
-            linkedPhysics.rb.linearVelocity = new Vector2(
-                glideHorizontalSpeed * linkedInput.HorizontalInput,
-                clampedY
+        // Apply horizontal input like in jump falling, but using glideHorizontalSpeed.
+        linkedPhysics.rb.linearVelocity = new Vector2(
+            glideHorizontalSpeed * linkedInput.HorizontalInput,
+            clampedY
             );
-        }
     }
     
     /// <summary>
@@ -102,6 +102,93 @@ public class GlideAbility : BaseAbility
                 linkedStateMachine.currentState == PlayerStates.State.Glide
             );
         }
+    }
+    #endregion
+    
+    #region Unity Events
+    /// <summary>
+    /// Called when the component becomes enabled.
+    /// </summary>
+    private void OnEnable()
+    {
+        // Subscribe to perform glide function.
+        glideActionRef.action.performed += TryToGlide;
+
+        // Subscribe to cancel/stop glide when the binding is released.
+        glideActionRef.action.canceled += StopGlide;
+    }
+
+    /// <summary>
+    /// Called when the component becomes disabled.
+    /// </summary>
+    private void OnDisable()
+    {
+        // Unsubscribe from glide function.
+        glideActionRef.action.performed -= TryToGlide;
+
+        // Unsubscribe from stop glide function.
+        glideActionRef.action.canceled -= StopGlide;
+    }
+    #endregion
+    
+    #region Glide Actions
+    /// <summary>
+    /// Initiates a glide action when the glide binding is performed.
+    /// </summary>
+    /// <param name="value">Callback context from the input system.</param>
+    private void TryToGlide(InputAction.CallbackContext value)
+    {
+        // If this ability is not allowed right now, do nothing.
+        if (!isPermitted)
+            return;
+        
+        // If out of charges, can't glide.
+        if (!HasAvailableCharges())
+            return;
+
+        // Only allow gliding if the player is follows the conditions
+        if (EvaluateGlideConditions())
+        {
+            // Consume charge if needed, otherwise exit early.
+            if(!TryConsumeCharge())
+                return;
+            
+            // Enter the Wall Jump state.
+            linkedStateMachine.ChangeState(PlayerStates.State.Glide);
+        }
+    }
+    
+    /// <summary>
+    /// Stops gliding when the glide binding is released.
+    /// </summary>
+    /// <param name="value">Callback context from the input system.</param>
+    private void StopGlide(InputAction.CallbackContext value)
+    {
+        // Only do anything if we're actually in the Glide state.
+        if (linkedStateMachine.currentState != PlayerStates.State.Glide)
+            return;
+
+        // If grounded, go back to idle; otherwise fall as part of the jump state.
+        if (linkedPhysics.IsGrounded)
+        {
+            linkedStateMachine.ChangeState(PlayerStates.State.Idle);
+        }
+        else
+        {
+            // Go back to Jump so normal falling physics take over.
+            linkedStateMachine.ChangeState(PlayerStates.State.Jump);
+        }
+    }
+    
+    /// <summary>
+    /// Return if the player is able to glide using various condition checks
+    /// </summary>
+    private bool EvaluateGlideConditions()
+    {
+        if (linkedPhysics.IsGrounded || linkedPhysics.rb.linearVelocityY > 0 || !IsAllowedForCurrentClass())
+            return false;
+
+        return true;
     }
     #endregion
 }

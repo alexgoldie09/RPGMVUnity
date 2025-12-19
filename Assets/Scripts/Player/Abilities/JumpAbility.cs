@@ -67,12 +67,12 @@ public class JumpAbility : BaseAbility
         }
         
         // If not grounded, and only Mage is allowed to enter the Glide state
-        if (!linkedPhysics.IsGrounded &&
-            player.currentClass == PlayerStates.CharacterClass.Mage &&
-            linkedPhysics.rb.linearVelocityY < 0)
-        {
-            linkedStateMachine.ChangeState(PlayerStates.State.Glide);
-        }
+        // if (!linkedPhysics.IsGrounded &&
+        //     player.currentClass == PlayerStates.CharacterClass.Mage &&
+        //     linkedPhysics.rb.linearVelocityY < 0)
+        // {
+        //     linkedStateMachine.ChangeState(PlayerStates.State.Glide);
+        // }
     }
 
     /// <summary>
@@ -179,7 +179,7 @@ public class JumpAbility : BaseAbility
     /// <param name="value">Callback context from the input system.</param>
     private void StopJump(InputAction.CallbackContext value)
     {
-        Debug.Log("Stop jump");
+        //Debug.Log("Stop jump");
     }
 
     #endregion
