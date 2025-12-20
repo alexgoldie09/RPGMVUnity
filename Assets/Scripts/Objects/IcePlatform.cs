@@ -55,7 +55,6 @@ public class IcePlatform : MonoBehaviour
     private float lifeTimer = 0f;
 
     #region Unity Methods
-
     private void Reset()
     {
         // Try to auto-wire the Tiles child.
@@ -76,11 +75,9 @@ public class IcePlatform : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     #endregion
 
-    #region Public API
-
+    #region Public Methods
     /// <summary>
     /// Initializes the platform at the given world position with a single top tile.
     /// Call this once after placing or spawning the platform.
@@ -159,8 +156,8 @@ public class IcePlatform : MonoBehaviour
     /// Used by abilities to move the rider along with the platform.
     /// </summary>
     public Vector2 TopPosition =>
-        currentTopTile != null ? (Vector2)currentTopTile.transform.position
-                               : (Vector2)transform.position;
+        currentTopTile != null ? currentTopTile.transform.position
+                               : transform.position;
 
     /// <summary>
     /// Current built height in tiles.
@@ -171,11 +168,9 @@ public class IcePlatform : MonoBehaviour
     /// Maximum allowed height in tiles.
     /// </summary>
     public int MaxHeight => maxHeightTiles;
-
     #endregion
 
     #region Coroutines
-
     /// <summary>
     /// Smoothly animates one growth step:
     /// - Spawns a column tile at the old top position.
@@ -223,6 +218,5 @@ public class IcePlatform : MonoBehaviour
         currentHeightTiles++;
         isRising = false;
     }
-
     #endregion
 }

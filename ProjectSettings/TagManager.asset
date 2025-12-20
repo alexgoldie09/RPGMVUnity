@@ -16,7 +16,7 @@ TagManager:
   - Enemy
   - CameraEdge
   - Wall
-  - 
+  - HookableWall
   - 
   - 
   - 

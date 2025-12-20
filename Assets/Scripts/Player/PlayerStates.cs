@@ -18,6 +18,7 @@ public class PlayerStates
         Glide,      // Player is gliding.
         Dash,       // Player performs a quick burst of movement.
         IceCast,    // Player performs an ice cast.
+        Hook,       // Player performs a hook shot.
         Ladders,    // Player is interacting with ladders.
         Ignore      // Utility state for ignoring state checks or transitions.
     }

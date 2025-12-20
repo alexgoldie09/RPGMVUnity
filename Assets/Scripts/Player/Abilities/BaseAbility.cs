@@ -22,9 +22,9 @@ public class BaseAbility : MonoBehaviour
     
     [Tooltip("If true, this ability can be used by all character classes.")]
     public bool availableToAllCharacters = true;
-
-    [Tooltip("If not available to all, this ability can only be used by this character class.")]
-    public PlayerStates.CharacterClass restrictedToClass;
+    
+    [Tooltip("If not available to all, these are the classes that can use this ability.")]
+    public PlayerStates.CharacterClass[] allowedClasses;
     
     [Header("Charge Settings")]
     [Tooltip("If true, this ability has a limited number of charges that recharge after a delay.")]
@@ -196,20 +196,36 @@ public class BaseAbility : MonoBehaviour
     #endregion
     
     #region Character Restriction Helpers
-
     /// <summary>
     /// Returns true if this ability is allowed for the player's current character class.
     /// </summary>
     protected bool IsAllowedForCurrentClass()
     {
-        // If the ability is available to all characters or we have no player reference yet,
-        // treat it as allowed.
-        if (availableToAllCharacters || player == null)
+        // If this ability is globally disabled, nothing can use it.
+        if (!isPermitted)
+            return false;
+
+        // If we don't have a player reference yet, don't block anything.
+        if (player == null)
             return true;
 
-        // Only allow the ability if the player's current class matches the restricted class.
-        return player.currentClass == restrictedToClass;
-    }
+        // If available to all, ignore class restrictions.
+        if (availableToAllCharacters)
+            return true;
 
+        // If we're restricted and no classes are listed, treat as "no one can use this".
+        if (allowedClasses == null || allowedClasses.Length == 0)
+            return false;
+
+        // Check if the current class is in the allowed list.
+        for (int i = 0; i < allowedClasses.Length; i++)
+        {
+            if (player.currentClass == allowedClasses[i])
+                return true;
+        }
+
+        // Not found in the list then its not allowed.
+        return false;
+    }
     #endregion
 }

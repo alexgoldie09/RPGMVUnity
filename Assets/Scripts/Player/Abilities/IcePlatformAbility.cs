@@ -35,7 +35,7 @@ public class IcePlatformAbility : BaseAbility
     [SerializeField] private Transform platformSpawnPoint;
 
     [Tooltip("Offset from the player's position used as the base spawn position of the platform when no spawn point is provided.")]
-    [SerializeField] private Vector2 platformSpawnOffset = new Vector2(0f, -0.5f);
+    [SerializeField] private Vector2 platformSpawnOffset = new(0f, -0.5f);
 
     [Header("Growth Timing")]
     [Tooltip("Time between individual growth steps while the input is held.")]
@@ -67,8 +67,7 @@ public class IcePlatformAbility : BaseAbility
     // Tracks the top tile position from the previous frame so we can move the player with the same delta.
     private Vector2 previousTopPosition;
 
-    #region BaseAbility Lifecycle
-
+    #region Base Class Overrides
     protected override void Initialization()
     {
         base.Initialization();
@@ -191,26 +190,19 @@ public class IcePlatformAbility : BaseAbility
         bool shouldCast = isCasting && linkedStateMachine.currentState == thisAbilityState;
         linkedAnim.SetBool(castParameterID, shouldCast);
     }
-
     #endregion
 
     #region Unity Events
     private void OnEnable()
     {
-        if (icePlatformActionRef != null && icePlatformActionRef.action != null)
-        {
-            icePlatformActionRef.action.performed += TryStartPlatformCast;
-            icePlatformActionRef.action.canceled += StopPlatformCast;
-        }
+        icePlatformActionRef.action.performed += TryStartPlatformCast;
+        icePlatformActionRef.action.canceled += StopPlatformCast;
     }
 
     private void OnDisable()
     {
-        if (icePlatformActionRef != null && icePlatformActionRef.action != null)
-        {
-            icePlatformActionRef.action.performed -= TryStartPlatformCast;
-            icePlatformActionRef.action.canceled -= StopPlatformCast;
-        }
+        icePlatformActionRef.action.performed -= TryStartPlatformCast;
+        icePlatformActionRef.action.canceled -= StopPlatformCast;
     }
     #endregion
 
@@ -271,7 +263,7 @@ public class IcePlatformAbility : BaseAbility
         growthTimer = growthInterval;
 
         // Switch the state machine into this ability's state (e.g., IceCast).
-        linkedStateMachine.ChangeState(thisAbilityState);
+        linkedStateMachine.ChangeState(PlayerStates.State.IceCast);
     }
 
     private void StopPlatformCast(InputAction.CallbackContext context)
@@ -326,7 +318,7 @@ public class IcePlatformAbility : BaseAbility
 
         PlayerStates.State targetState = linkedStateMachine.previousState;
 
-        if (targetState == thisAbilityState || targetState == PlayerStates.State.Ignore)
+        if (targetState == PlayerStates.State.IceCast || targetState == PlayerStates.State.Ignore)
         {
             targetState = linkedPhysics.IsGrounded
                 ? PlayerStates.State.Idle
@@ -335,6 +327,5 @@ public class IcePlatformAbility : BaseAbility
 
         linkedStateMachine.ChangeState(targetState);
     }
-
     #endregion
 }
